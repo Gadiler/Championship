@@ -18,7 +18,3 @@ Guidelines:
 
 
 
-Known Issues: (Exceptions)
-1. When tie after first extra time -> only with Soccer.
-2. Switching between different sports via radio buttons will preserve the teams/players.
-3. Failing to fill penalty kicks in soccer might end up with an exception.
