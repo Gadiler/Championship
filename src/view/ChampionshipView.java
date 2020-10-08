@@ -21,7 +21,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
-import model.Match;
 
 public class ChampionshipView implements AbstractChampionshipView {
 	private final int FINAL_PARTICIPANTS = 8;
@@ -30,7 +29,7 @@ public class ChampionshipView implements AbstractChampionshipView {
 	private Vector<TextField> allEighthFinals = new Vector<TextField>();
 	private Vector<TextField> allQuarterFinals = new Vector<TextField>();
 	private Vector<TextField> allSemiFinals = new Vector<TextField>();
-	private Vector<Match> allMatches = new Vector<Match>();
+	private Vector<MatchView> allMatches = new Vector<MatchView>();
 	private TextField Final = new TextField();
 	private Stage theStage;
 	private GridPane gpRoot;	
@@ -70,13 +69,13 @@ public class ChampionshipView implements AbstractChampionshipView {
 //	Initialize the button - "Play a Match"
 	@Override
 	public boolean playMatch(String team1, String team2, String selectedToggle) {
-		for (Match M : allMatches) {
+		for (MatchView M : allMatches) {
 			if (M.getTeam1().equals(team1) && M.getTeam2().equals(team2)) {
 				M.theMatchStage.show();
 				return false;
 			}
 		}
-		allMatches.add(new Match(team1, team2, selectedToggle));
+		allMatches.add(new MatchView(team1, team2, selectedToggle));
 		matchesSize++;
 		return true;
 	}

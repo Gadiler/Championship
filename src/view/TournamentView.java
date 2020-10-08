@@ -38,14 +38,12 @@ public class TournamentView implements AbstractTournamentView {
 
 	public TournamentView(Stage theStage) {
 		theStage.setTitle("The Initialize");
-//		
+
 		Image image = new Image("file:logo.jpg");
 
-		BackgroundSize backgroundSize = new BackgroundSize(50, 50, true, true, true, false);
-		BackgroundImage backgroundImage = new BackgroundImage(image, BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, backgroundSize);
+		BackgroundSize backgroundSize = new BackgroundSize(180, 100, false, false, false, false);
+		BackgroundImage backgroundImage = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, backgroundSize);
 		Background background = new Background(backgroundImage);
-
-//		
 
 		RadioButton rdoTenis = new RadioButton("Tennis");
 		RadioButton rdoSoccer = new RadioButton("Soccer");
@@ -60,6 +58,7 @@ public class TournamentView implements AbstractTournamentView {
 		gpRoot.setAlignment(Pos.CENTER);
 		gpRoot.setHgap(10);
 		gpRoot.setVgap(10);
+		gpRoot.setBackground(background);
 
 		lblName = new Label();
 		tfName = new TextField();
