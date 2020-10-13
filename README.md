@@ -17,7 +17,7 @@ Any steps have his button ("Play a Match") to start the match.
 The winner  - the one with the highest score, or with more sets victory (Tennis) - 
 pass to the next level and his name or team's name move to the next TextField.
 
-###Third window:
+### Third window:
 
 
 **core window, any sports, and his scoring method**.
